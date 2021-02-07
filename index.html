@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./app.css" />
+  </head>
+  <body>
+    <!-- <div class="hero">
+      <img src="./images/hero-health.png" alt="bg_hero" />
+      <h1>Lighting solutions for the healthcare environment</h1>
+    </div>
+    <div class="banner">
+      <h3>
+        Complex healthcare environments demand carefully planned and thoughtful
+        lighting solutions. Lighting must be welcoming, calming and healing,
+        whilst aiding staff productivity and wellbeing.
+      </h3>
+    </div>
+
+  <div class="swiper-main">
+    <div class="swiper-container">
+    
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="./images/image-2.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/image-3-1.png" alt=""></div>
+        <div class="swiper-slide"><img src="./images/EagleLighting_Monash_BusExchange_hiresphoto__02-1.png" alt=""></div>
+      </div>
+    </div>
+         <div class="swiper-pagination"></div>
+         <div class="swiper-button-prev"></div>
+         <div class="swiper-button-next"></div>
+  </div> -->
+
+    <header>
+      <h1>Jquery Crash Course</h1>
+    </header>
+    
+    <div id="container">
+      <div id="result"></div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="./app.js"></script>
+
+
+    <script>
+      const api = "https://jsonplaceholder.typicode.com/todos" 
+      
+      fetch(api)
+      .then(res => res.json())
+      .then(data => { 
+        data.forEach(el => {
+          $("#result").append(`<h1>${el.title}</h1><p>${el.id}</p>`)
+        });
+      })
+
+     
+    </script>
+  </body>
+</html>
